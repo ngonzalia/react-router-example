@@ -2,11 +2,10 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const Blog = () => {
   const { blogs } = useLoaderData();
-  console.log(blogs);
 
   return (
     <ul>
-      {blogs.lenght > 0 ? (
+      {blogs.length > 0 ? (
         blogs.map((blog) => (
           <li key={blog.id}>
             <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
